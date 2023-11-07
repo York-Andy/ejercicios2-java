@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Gps_extra1_guia3">
+  <ClassDiagramComponents>
+    <Class name="Gps" package="" visibility="public" xPosition="132.0" yPosition="47.0">
+      <Fields>
+        <Field name="marca" type="String" visibility="private"/>
+        <Field name="modelo" type="String" visibility="private"/>
+        <Field name="untitledField" type="Object" visibility="private"/>
+        <Field name="ultimaUbicacion" type="Posicion" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="obtenerUltimaPosicion" returnType="Posicion" visibility="public"/>
+        <Method name="mover" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Posicion" package="" visibility="public" xPosition="688.0" yPosition="47.0">
+      <Fields>
+        <Field name="latitud" type="double" visibility="private"/>
+        <Field name="longitud" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="latitud"/>
+          <Argument type="double" name="longitud"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Persona" package="" visibility="public" xPosition="659.0" yPosition="329.0">
+      <Fields>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="nombre"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="ubicarme" returnType="void" visibility="public">
+          <Argument type="Gps" name="gps"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tiene" source="Gps" target="Posicion" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="usa" source="Persona" target="Gps" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

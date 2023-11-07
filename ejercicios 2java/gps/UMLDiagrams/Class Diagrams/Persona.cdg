@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Persona">
+  <ClassDiagramComponents>
+    <Class name="Perro" package="" visibility="public" xPosition="164.0" yPosition="106.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="raza" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="tamanio" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Persona" package="" visibility="public" xPosition="603.0" yPosition="139.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="dni" type="int" visibility="private"/>
+        <Field name="mascota1" type="Perro" visibility="private"/>
+        <Field name="mascota2" type="Perro" visibility="private"/>
+        <Field name="mascota3" type="Perro" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="adoptarPerro" returnType="void" visibility="public">
+          <Argument type="Perro" name="mascota"/>
+        </Method>
+        <Method name="perroMasGrande" returnType="Perro" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="adoptar" source="Persona" target="Perro" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
